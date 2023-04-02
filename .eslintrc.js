@@ -22,7 +22,7 @@ module.exports = {
     'one-var': 'off',
     'no-unused-vars': ['warn', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
     camelcase: 'off',
-    'no-console': 'error',
+    'no-console': 'warn',
     'comma-dangle': ['error', 'never']
   }
 };
