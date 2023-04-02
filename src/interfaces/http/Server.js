@@ -7,10 +7,11 @@ class Server {
    * @param {import('src/container')} ctx.container
    * @param {import('config')} ctx.config
    */
-  constructor({ container, config }) {
+  constructor({ container, config, router }) {
     this.config = config;
     this.express = express();
     this.express.use(scopePerRequest(container));
+    this.express.use(router);
   }
 
   initServer() {
