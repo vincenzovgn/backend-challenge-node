@@ -8,12 +8,16 @@
     "vincenzovgn@gmail.com"
   ],
   "license": "MIT",
+  "engines": {
+    "node": "f>=18.11.x <18.15.0"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "scripts": {
+    "start": "node --watch index.js",
     "prepare": "husky install",
     "test": "echo test immplementation",
     "lint": " eslint 'src/**/*.js' 'test/**/*.js' './**/*.js'",
