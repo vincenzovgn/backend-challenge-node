@@ -4,6 +4,11 @@ module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
     static associate(models) {
       // define association here
+      const { Product, Order } = models;
+      Product.hasMany(Order, {
+        as: 'orders',
+        foreignKey: 'idProduct'
+      });
     }
   }
   Product.init(
