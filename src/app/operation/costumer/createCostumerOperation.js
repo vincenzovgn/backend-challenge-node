@@ -1,8 +1,8 @@
-module.exports = ({ costumerService }) => ({
+module.exports = ({ createCostumer, checksAlreadyExistsCostumer }) => ({
   execute: async (data) => {
-    // costumerService.checksAlreadyExists(cpf)
+    checksAlreadyExistsCostumer.execute(cpf);
     // const costumer = createCostumerFactory.build(data)
-    const response = await costumerService.create(data);
+    const response = await createCostumer.execute(data);
     return response;
   }
 });

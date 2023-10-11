@@ -1,5 +1,5 @@
 module.exports = ({ costumerRepository, exceptions }) => ({
-  create: async (data) => {
+  execute: async (data) => {
     try {
       const response = await costumerRepository.create(data);
       return response;
